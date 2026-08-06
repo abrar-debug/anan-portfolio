@@ -1,0 +1,34 @@
+:root {
+  /* palette — materials, not corporate: limestone paper, ink, rust accent */
+  --paper: #f3f0e9;
+  --paper-rgb: 243, 240, 233;
+  --paper-dim: #eae4d6;
+  --ink: #14130f;
+  --ink-rgb: 20, 19, 15;
+  --ink-soft: #4a473e;
+  --concrete: #b9b2a0;
+  /* darkened just enough to clear 4.5:1 AA contrast for small text on --paper-dim */
+  --rust: #a8421a;
+  --rust-rgb: 168, 66, 26;
+  --rust-soft: #d97f4b;
+  --line: rgba(var(--ink-rgb), 0.14);
+  --line-on-dark: rgba(var(--paper-rgb), 0.18);
+
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --container: min(92vw, 1440px);
+  --gutter: clamp(20px, 4vw, 64px);
+
+  --nav-h: 84px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --nav-h: 64px;
+  }
+}

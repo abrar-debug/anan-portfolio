@@ -1,0 +1,28 @@
+.manifesto {
+  background: var(--paper-dim);
+}
+
+.manifesto-meta {
+  margin-bottom: clamp(28px, 5vw, 56px);
+}
+
+.manifesto-text {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 4.6vw, 3.7rem);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  max-width: 22ch;
+}
+
+.split-line {
+  display: block;
+}
+
+.manifesto-footnote {
+  margin-top: clamp(36px, 6vw, 64px);
+  max-width: 42ch;
+  margin-left: auto;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}

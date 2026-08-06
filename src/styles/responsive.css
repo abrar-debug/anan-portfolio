@@ -1,0 +1,20 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  section {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  .contact-meta {
+    gap: 32px;
+  }
+
+  .quote-slide p {
+    max-width: 24ch;
+  }
+}

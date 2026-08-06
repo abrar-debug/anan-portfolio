@@ -1,0 +1,183 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  background: var(--paper);
+  padding: calc(var(--nav-h) + 24px) var(--gutter) 40px;
+}
+
+.hero-skyline-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-skyline {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  min-width: 1100px;
+  height: 58vh;
+  min-height: 320px;
+  max-height: 560px;
+}
+
+.hero-skyline * {
+  vector-effect: non-scaling-stroke;
+}
+
+.sky-layer {
+  fill: none;
+  stroke: var(--ink);
+}
+
+.sky-back {
+  stroke-width: 1.4;
+  opacity: 0.22;
+}
+
+.sky-mid {
+  stroke-width: 1.6;
+  opacity: 0.42;
+}
+
+.sky-front {
+  stroke-width: 1.7;
+  opacity: 0.9;
+}
+
+.sky-front .accent-fill {
+  fill: var(--rust);
+  stroke: none;
+}
+
+.sky-front .tick-label {
+  fill: var(--rust);
+  stroke: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: clamp(18px, 3vw, 28px);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(3.4rem, 12vw, 9rem);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.line-mask {
+  display: block;
+  overflow: hidden;
+}
+
+.line-mask .line {
+  display: block;
+  transform: translateY(110%);
+}
+
+[data-hero-reveal] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-hero-reveal] {
+    opacity: 1;
+  }
+
+  .line-mask .line {
+    transform: none;
+  }
+}
+
+.hero-sub {
+  margin-top: clamp(22px, 3.4vw, 34px);
+  max-width: 46ch;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: var(--ink-soft);
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  bottom: clamp(20px, 4vw, 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.hero-scroll-cue span {
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(var(--ink-soft), transparent);
+  animation: scrollcue 2.2s var(--ease-soft) infinite;
+}
+
+@keyframes scrollcue {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50.1% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-cue span {
+    animation: none;
+    height: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-skyline {
+    min-width: 900px;
+    height: 40vh;
+    opacity: 0.8;
+  }
+}

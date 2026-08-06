@@ -1,0 +1,72 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1s var(--ease);
+}
+
+.preloader.is-done {
+  clip-path: inset(0 0 100% 0);
+}
+
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.preloader-mark {
+  width: 90px;
+  height: 60px;
+  overflow: visible;
+}
+
+.preloader-mark line {
+  stroke: var(--paper);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.preloader-bar {
+  width: 180px;
+  height: 1px;
+  background: rgba(var(--paper-rgb), 0.25);
+  position: relative;
+}
+
+.preloader-bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: var(--rust);
+}
+
+.preloader-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--paper);
+  display: flex;
+}
+
+.preloader-count small {
+  opacity: 0.6;
+  margin-left: 2px;
+}
+
+body.is-loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader {
+    transition: none;
+  }
+}

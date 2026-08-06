@@ -1,0 +1,94 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-soft);
+}
+
+html.has-custom-cursor .cursor {
+  opacity: 1;
+}
+
+html.has-custom-cursor {
+  cursor: none;
+}
+
+html.has-custom-cursor a,
+html.has-custom-cursor button {
+  cursor: none;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--rust);
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--ink-rgb), 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.35s var(--ease), height 0.35s var(--ease),
+    margin 0.35s var(--ease), border-color 0.35s var(--ease),
+    background 0.35s var(--ease);
+}
+
+.cursor-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.25s var(--ease-soft);
+  white-space: nowrap;
+}
+
+html.cursor-on-dark .cursor-ring {
+  border-color: rgba(var(--paper-rgb), 0.6);
+}
+
+html.cursor-hover-link .cursor-ring {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-color: var(--rust-soft);
+}
+
+html.cursor-hover-view .cursor-ring {
+  width: 96px;
+  height: 96px;
+  margin: -48px 0 0 -48px;
+  background: var(--rust);
+  border-color: var(--rust);
+}
+
+html.cursor-hover-view .cursor-label {
+  opacity: 1;
+  color: var(--paper);
+}
+
+html.cursor-hover-view .cursor-dot {
+  opacity: 0;
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor {
+    display: none;
+  }
+}
