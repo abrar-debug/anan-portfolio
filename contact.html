@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anan Hoque — Architecture Studio</title>
-  <meta name="description" content="Anan Hoque is an architecture studio designing residential, cultural and civic buildings shaped by light, material and site." />
+  <title>Contact — Anan Hoque</title>
+  <meta name="description" content="Get in touch with Anan Hoque, an architecture studio designing residential, cultural and civic buildings shaped by light, material and site." />
   <meta name="theme-color" content="#14130f" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -15,7 +15,7 @@
     rel="stylesheet"
   />
 </head>
-<body class="is-hero">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- custom cursor -->
@@ -52,32 +52,37 @@
   </header>
 
   <main id="main">
-    <section id="work" class="work-hero" data-theme="dark" data-index-carousel>
-      <div class="hero-slides" data-index-slides></div>
-
-      <div class="hero-scrim" aria-hidden="true"></div>
-
-      <div class="hero-overlay">
-        <div class="hero-overlay-text" aria-live="polite">
-          <p class="hero-overlay-meta" data-index-meta-el></p>
-          <h2 class="hero-overlay-title" data-index-title-el></h2>
-        </div>
-
-        <a href="/project.html" class="hero-cta" data-index-readmore data-cursor="view">
-          <span class="hero-cta-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-          </span>
-          <span class="hero-cta-label">Read more about this project</span>
-          <span class="hero-cta-counter">
-            <span class="hero-cta-counter-current" data-index-counter-current>01</span>
-            <span class="hero-cta-counter-sep">/</span>
-            <span data-index-counter-total>08</span>
-          </span>
+    <section class="contact" data-theme="dark">
+      <div class="contact-inner">
+        <span class="contact-eyebrow" data-reveal>Contact</span>
+        <h1 class="contact-title" data-reveal>Let's design <em>what's next.</em></h1>
+        <a href="mailto:studio@ananhoque.com" class="contact-email" data-copy data-magnetic data-cursor="view" data-reveal>
+          <span class="copy-toast">Copied</span>
+          studio@ananhoque.com
         </a>
+        <div class="contact-meta" data-reveal>
+          <div>
+            <span>Studio</span>
+            <p>Based worldwide — studio visits by appointment.</p>
+          </div>
+          <div>
+            <span>Social</span>
+            <p><a href="#" data-cursor="link">Instagram</a> · <a href="#" data-cursor="link">LinkedIn</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <script type="module" src="/src/main.js"></script>
+  <footer class="site-footer" data-theme="dark">
+    <div class="site-footer-inner">
+      <p>© 2026 Anan Hoque Architecture. All rights reserved.</p>
+      <button class="to-top" data-to-top data-magnetic data-cursor="link" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M12 5L5 12M12 5L19 12" /></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/static-page-main.js"></script>
 </body>
 </html>

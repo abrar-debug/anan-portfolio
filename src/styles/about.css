@@ -1,0 +1,140 @@
+.about {
+  background: var(--paper-dim);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+
+.about-visual {
+  position: sticky;
+  top: calc(var(--nav-h) + 40px);
+}
+
+.about-mark {
+  width: 100%;
+  height: auto;
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  fill: none;
+  opacity: 0.85;
+}
+
+.about-mark * {
+  vector-effect: non-scaling-stroke;
+}
+
+.about-mark .dim-line {
+  stroke: var(--rust);
+}
+
+.about-mark .tick-label {
+  fill: var(--rust);
+  stroke: none;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rust);
+}
+
+.about-content h1 {
+  font-size: clamp(2.4rem, 5.6vw, 4rem);
+  margin-top: 14px;
+}
+
+.about-lede {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  line-height: 1.42;
+  margin-top: 24px;
+}
+
+.about-content > p:not(.about-lede) {
+  margin-top: 20px;
+  max-width: 60ch;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.about-capabilities {
+  margin-top: clamp(44px, 6vw, 68px);
+  border-top: 1px solid var(--line);
+}
+
+.about-capabilities li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 2px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  transition: padding-left 0.35s var(--ease-soft), color 0.35s var(--ease-soft);
+}
+
+.about-capabilities li:hover {
+  padding-left: 14px;
+  color: var(--rust);
+}
+
+.cap-index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.about-quote {
+  margin-top: clamp(44px, 6vw, 68px);
+  padding-left: clamp(20px, 3vw, 28px);
+  border-left: 2px solid var(--rust);
+}
+
+.about-quote .quote-mark {
+  width: 34px;
+  height: 25px;
+  margin-bottom: 16px;
+  fill: var(--rust);
+}
+
+.about-quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  line-height: 1.42;
+  max-width: 42ch;
+}
+
+.about-quote footer {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.about-quote cite {
+  font-style: normal;
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visual {
+    position: static;
+    max-width: 380px;
+  }
+}

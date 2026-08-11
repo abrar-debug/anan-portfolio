@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project — Anan Hoque</title>
-  <meta name="description" content="A project by Anan Hoque, an architecture studio designing residential, cultural and civic buildings shaped by light, material and site." />
+  <title>About — Anan Hoque</title>
+  <meta name="description" content="Anan Hoque is an architecture studio designing residential, cultural and civic buildings shaped by light, material and site." />
   <meta name="theme-color" content="#14130f" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -52,29 +52,55 @@
   </header>
 
   <main id="main">
-    <section class="detail-hero" data-theme="dark" data-detail-visual>
-      <div class="hero-scrim" aria-hidden="true"></div>
-      <div class="hero-overlay">
-        <div class="hero-overlay-text">
-          <p class="hero-overlay-meta" data-detail-meta></p>
-          <h1 class="hero-overlay-title" data-detail-title></h1>
-        </div>
+    <section class="about">
+      <div class="about-visual" data-reveal>
+        <svg class="about-mark" viewBox="0 0 500 500" fill="none" aria-hidden="true">
+          <rect x="40" y="280" width="200" height="180" />
+          <line x1="150" y1="280" x2="150" y2="460" />
+          <path d="M150 320 A40 40 0 0 1 190 360" />
+          <line x1="60" y1="300" x2="90" y2="300" />
+          <line x1="60" y1="315" x2="88" y2="315" />
+          <line x1="60" y1="330" x2="90" y2="330" />
+          <line x1="60" y1="345" x2="88" y2="345" />
+          <line x1="60" y1="360" x2="90" y2="360" />
+          <rect x="280" y="60" width="180" height="260" />
+          <line x1="280" y1="126" x2="460" y2="126" />
+          <line x1="280" y1="192" x2="460" y2="192" />
+          <line x1="280" y1="258" x2="460" y2="258" />
+          <line x1="346" y1="60" x2="346" y2="320" />
+          <line x1="412" y1="60" x2="412" y2="320" />
+          <circle cx="70" cy="80" r="18" />
+          <line x1="70" y1="62" x2="70" y2="98" />
+          <line x1="52" y1="80" x2="88" y2="80" />
+          <line x1="40" y1="440" x2="240" y2="440" class="dim-line" />
+          <text x="140" y="480" class="tick-label" text-anchor="middle">1 : 100</text>
+        </svg>
       </div>
-    </section>
 
-    <section class="detail-body">
-      <div class="detail-body-inner">
-        <p class="detail-description" data-detail-description data-reveal></p>
+      <div class="about-content">
+        <span class="about-eyebrow" data-reveal>About</span>
+        <h1 data-reveal>Anan Hoque</h1>
+        <p class="about-lede" data-reveal>
+          Anan works at the scale of a doorframe and the scale of a skyline — and treats both with equal seriousness.
+        </p>
+        <p data-reveal>
+          The studio takes on a small number of projects at a time: houses, cultural buildings, and the
+          occasional room worth obsessing over. Every commission starts on paper, moves through models
+          built by hand, and ends, we hope, somewhere quieter than where it began.
+        </p>
 
-        <div class="detail-features" data-reveal>
-          <span class="detail-features-label">Specification</span>
-          <ul data-detail-features></ul>
-        </div>
+        <ul class="about-capabilities" data-reveal-group>
+          <li data-reveal-line><span>Concept &amp; Masterplanning</span><span class="cap-index">01</span></li>
+          <li data-reveal-line><span>Architecture &amp; Interiors</span><span class="cap-index">02</span></li>
+          <li data-reveal-line><span>Material &amp; Detail Research</span><span class="cap-index">03</span></li>
+          <li data-reveal-line><span>Site Supervision</span><span class="cap-index">04</span></li>
+        </ul>
 
-        <a href="/" class="detail-back-link" data-cursor="link" data-reveal>
-          <svg class="detail-back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7L7 17M7 17H15M7 17V9" /></svg>
-          Back to all projects
-        </a>
+        <blockquote class="about-quote" data-reveal>
+          <svg class="quote-mark" viewBox="0 0 64 48" aria-hidden="true"><path d="M0 48V28.8C0 12.8 9.6 2.4 24 0L27.2 6.4C17.6 9.6 12.8 16 12.8 24H24V48H0ZM36.8 48V28.8C36.8 12.8 46.4 2.4 60.8 0L64 6.4C54.4 9.6 49.6 16 49.6 24H60.8V48H36.8Z" /></svg>
+          <p>"Anan listens before drawing a single line. The house feels like it grew out of the site, not onto it."</p>
+          <footer>Private Residence Client — <cite>Meridian House</cite></footer>
+        </blockquote>
       </div>
     </section>
 
@@ -109,6 +135,6 @@
     </div>
   </footer>
 
-  <script type="module" src="/src/project-detail-main.js"></script>
+  <script type="module" src="/src/static-page-main.js"></script>
 </body>
 </html>
