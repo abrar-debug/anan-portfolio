@@ -64,13 +64,6 @@
     <p class="nav-mobile-email">studio@ananhoque.com</p>
   </div>
 
-  <!-- live index counter — pinned while the work index is in view -->
-  <div class="index-counter" id="index-counter" aria-hidden="true">
-    <span class="index-counter-current" id="index-counter-current">01</span>
-    <span class="index-counter-sep">/</span>
-    <span class="index-counter-total" id="index-counter-total">08</span>
-  </div>
-
   <main id="main">
 
     <!-- ============ HERO ============ -->
@@ -143,188 +136,204 @@
         </p>
       </div>
 
-      <div class="index-list">
+      <div class="index-carousel" data-index-carousel data-reveal>
+        <div class="index-slides">
 
-        <article class="index-item" data-project data-category="residential">
-          <div class="index-item-visual">
-            <svg class="project-art" viewBox="0 0 400 300" fill="none">
-              <path d="M40 40 H260 V140 H360 V260 H40 Z" />
-              <rect x="90" y="90" width="120" height="120" />
-              <circle cx="150" cy="150" r="18" />
-              <path d="M260 140 A40 40 0 0 1 220 180" />
-            </svg>
-            <span class="project-number">01</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">Meridian House</h3>
-              <p class="project-meta">Residential — Private Residence — 2024</p>
+          <article class="index-slide active" data-index-slide>
+            <div class="index-slide-visual">
+              <svg class="project-art" viewBox="0 0 400 300" fill="none">
+                <path d="M40 40 H260 V140 H360 V260 H40 Z" />
+                <rect x="90" y="90" width="120" height="120" />
+                <circle cx="150" cy="150" r="18" />
+                <path d="M260 140 A40 40 0 0 1 220 180" />
+              </svg>
+              <span class="project-number">01</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">A courtyard house that turns inward, wrapping a single family around a garden of shadow and citrus.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">Meridian House</h3>
+                <p class="project-meta">Residential — Private Residence — 2024</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">A courtyard house that turns inward, wrapping a single family around a garden of shadow and citrus.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="index-item" data-project data-category="cultural">
-          <div class="index-item-visual">
-            <svg class="project-art" viewBox="0 0 400 300" fill="none">
-              <path d="M25 260 V180 A35 35 0 0 1 95 180 V260" />
-              <path d="M115 260 V180 A35 35 0 0 1 185 180 V260" />
-              <path d="M205 260 V180 A35 35 0 0 1 275 180 V260" />
-              <path d="M295 260 V180 A35 35 0 0 1 365 180 V260" />
-              <line x1="10" y1="260" x2="390" y2="260" />
-            </svg>
-            <span class="project-number">02</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">The Kiln Pavilion</h3>
-              <p class="project-meta">Cultural — Public Pavilion — 2023</p>
+          <article class="index-slide" data-index-slide>
+            <div class="index-slide-visual">
+              <svg class="project-art" viewBox="0 0 400 300" fill="none">
+                <path d="M25 260 V180 A35 35 0 0 1 95 180 V260" />
+                <path d="M115 260 V180 A35 35 0 0 1 185 180 V260" />
+                <path d="M205 260 V180 A35 35 0 0 1 275 180 V260" />
+                <path d="M295 260 V180 A35 35 0 0 1 365 180 V260" />
+                <line x1="10" y1="260" x2="390" y2="260" />
+              </svg>
+              <span class="project-number">02</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">Seven brick arches recall the kilns once fired on this site, reframed as a gathering hall for the community that replaced them.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">The Kiln Pavilion</h3>
+                <p class="project-meta">Cultural — Public Pavilion — 2023</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">Seven brick arches recall the kilns once fired on this site, reframed as a gathering hall for the community that replaced them.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="index-item" data-project data-category="residential">
-          <div class="index-item-visual index-item-visual--hatch hatch-concrete">
-            <span class="project-number">03</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">Ridgeline House</h3>
-              <p class="project-meta">Residential — Private Residence — 2024</p>
+          <article class="index-slide" data-index-slide>
+            <div class="index-slide-visual index-slide-visual--hatch hatch-concrete">
+              <span class="project-number">03</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">A ridgeline silhouette split into three staggered volumes, each catching a different hour of light.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">Ridgeline House</h3>
+                <p class="project-meta">Residential — Private Residence — 2024</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">A ridgeline silhouette split into three staggered volumes, each catching a different hour of light.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="index-item" data-project data-category="civic">
-          <div class="index-item-visual">
-            <svg class="project-art" viewBox="0 0 400 300" fill="none">
-              <rect x="40" y="200" width="320" height="60" />
-              <rect x="80" y="150" width="240" height="50" />
-              <rect x="120" y="100" width="160" height="50" />
-              <rect x="160" y="60" width="80" height="40" />
-            </svg>
-            <span class="project-number">04</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">Threshold Cultural Center</h3>
-              <p class="project-meta">Civic — Cultural Institution — 2022</p>
+          <article class="index-slide" data-index-slide>
+            <div class="index-slide-visual">
+              <svg class="project-art" viewBox="0 0 400 300" fill="none">
+                <rect x="40" y="200" width="320" height="60" />
+                <rect x="80" y="150" width="240" height="50" />
+                <rect x="120" y="100" width="160" height="50" />
+                <rect x="160" y="60" width="80" height="40" />
+              </svg>
+              <span class="project-number">04</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">A stepped civic building that terraces down to the waterline, blurring the edge between architecture and public stair.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">Threshold Cultural Center</h3>
+                <p class="project-meta">Civic — Cultural Institution — 2022</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">A stepped civic building that terraces down to the waterline, blurring the edge between architecture and public stair.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="index-item" data-project data-category="interiors">
-          <div class="index-item-visual index-item-visual--hatch hatch-timber">
-            <span class="project-number">05</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">Harbor Light Studio</h3>
-              <p class="project-meta">Interiors — Studio Fit-out — 2022</p>
+          <article class="index-slide" data-index-slide>
+            <div class="index-slide-visual index-slide-visual--hatch hatch-timber">
+              <span class="project-number">05</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">A single-room studio wrapped in glass block, built to catch the harbor's reflected light all day.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">Harbor Light Studio</h3>
+                <p class="project-meta">Interiors — Studio Fit-out — 2022</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">A single-room studio wrapped in glass block, built to catch the harbor's reflected light all day.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="index-item" data-project data-category="residential">
-          <div class="index-item-visual">
-            <svg class="project-art" viewBox="0 0 400 300" fill="none">
-              <rect x="60" y="40" width="280" height="220" />
-              <line x1="60" y1="80" x2="340" y2="80" />
-              <line x1="60" y1="120" x2="340" y2="120" />
-              <line x1="60" y1="160" x2="340" y2="160" />
-              <line x1="60" y1="200" x2="340" y2="200" />
-              <line x1="200" y1="40" x2="200" y2="260" />
-            </svg>
-            <span class="project-number">06</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">Cedar Court</h3>
-              <p class="project-meta">Residential — Multi-Unit Housing — 2021</p>
+          <article class="index-slide" data-index-slide>
+            <div class="index-slide-visual">
+              <svg class="project-art" viewBox="0 0 400 300" fill="none">
+                <rect x="60" y="40" width="280" height="220" />
+                <line x1="60" y1="80" x2="340" y2="80" />
+                <line x1="60" y1="120" x2="340" y2="120" />
+                <line x1="60" y1="160" x2="340" y2="160" />
+                <line x1="60" y1="200" x2="340" y2="200" />
+                <line x1="200" y1="40" x2="200" y2="260" />
+              </svg>
+              <span class="project-number">06</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">Twelve homes stacked around a shared timber stair, each with a private terrace cut deep enough to hold a table for six.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">Cedar Court</h3>
+                <p class="project-meta">Residential — Multi-Unit Housing — 2021</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">Twelve homes stacked around a shared timber stair, each with a private terrace cut deep enough to hold a table for six.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="index-item" data-project data-category="cultural">
-          <div class="index-item-visual index-item-visual--hatch hatch-brick">
-            <span class="project-number">07</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">Salt Store Renovation</h3>
-              <p class="project-meta">Cultural — Adaptive Reuse — 2023</p>
+          <article class="index-slide" data-index-slide>
+            <div class="index-slide-visual index-slide-visual--hatch hatch-brick">
+              <span class="project-number">07</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">A derelict salt store re-timbered and re-roofed, left rough where the walls still remembered the work they once did.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">Salt Store Renovation</h3>
+                <p class="project-meta">Cultural — Adaptive Reuse — 2023</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">A derelict salt store re-timbered and re-roofed, left rough where the walls still remembered the work they once did.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="index-item" data-project data-category="interiors">
-          <div class="index-item-visual">
-            <svg class="project-art" viewBox="0 0 400 300" fill="none">
-              <line x1="20" y1="240" x2="380" y2="240" />
-              <path d="M40 240 L90 100 L140 240" />
-              <path d="M150 240 L200 100 L250 240" />
-              <path d="M260 240 L310 100 L360 240" />
-              <rect x="80" y="90" width="20" height="10" />
-              <rect x="190" y="90" width="20" height="10" />
-              <rect x="300" y="90" width="20" height="10" />
-            </svg>
-            <span class="project-number">08</span>
-          </div>
-          <div class="index-item-row">
-            <div class="index-item-lead">
-              <h3 class="project-title">Long Room Gallery</h3>
-              <p class="project-meta">Interiors — Gallery Fit-out — 2020</p>
+          <article class="index-slide" data-index-slide>
+            <div class="index-slide-visual">
+              <svg class="project-art" viewBox="0 0 400 300" fill="none">
+                <line x1="20" y1="240" x2="380" y2="240" />
+                <path d="M40 240 L90 100 L140 240" />
+                <path d="M150 240 L200 100 L250 240" />
+                <path d="M260 240 L310 100 L360 240" />
+                <rect x="80" y="90" width="20" height="10" />
+                <rect x="190" y="90" width="20" height="10" />
+                <rect x="300" y="90" width="20" height="10" />
+              </svg>
+              <span class="project-number">08</span>
             </div>
-            <div class="index-item-copy">
-              <p class="project-desc">A single top-lit room, ninety metres long, built to hold nothing but attention.</p>
-              <a href="#" class="project-link" data-cursor="view">View Project
-                <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-              </a>
+            <div class="index-slide-row">
+              <div class="index-slide-lead">
+                <h3 class="project-title">Long Room Gallery</h3>
+                <p class="project-meta">Interiors — Gallery Fit-out — 2020</p>
+              </div>
+              <div class="index-slide-copy">
+                <p class="project-desc">A single top-lit room, ninety metres long, built to hold nothing but attention.</p>
+                <a href="#" class="project-link" data-cursor="view">View Project
+                  <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
+        </div>
+
+        <div class="index-carousel-controls">
+          <button class="carousel-btn" data-index-prev aria-label="Previous project" data-cursor="link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5L8 12L15 19" /></svg>
+          </button>
+          <div class="index-counter" aria-hidden="true">
+            <span class="index-counter-current" data-index-counter-current>01</span>
+            <span class="index-counter-sep">/</span>
+            <span class="index-counter-total" data-index-counter-total>08</span>
+          </div>
+          <button class="carousel-btn" data-index-next aria-label="Next project" data-cursor="link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5L16 12L9 19" /></svg>
+          </button>
+        </div>
       </div>
     </section>
 

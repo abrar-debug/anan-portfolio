@@ -24,31 +24,50 @@
   color: rgba(var(--paper-rgb), 0.75);
 }
 
-.index-list {
+.index-carousel {
   max-width: var(--container);
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(70px, 10vw, 130px);
 }
 
-.index-item-visual {
+.index-slides {
   position: relative;
-  aspect-ratio: 16 / 9;
+  height: clamp(600px, 60vw, 760px);
+}
+
+.index-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+  transition: opacity 0.7s var(--ease-soft), transform 0.7s var(--ease-soft);
+}
+
+.index-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.index-slide-visual {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow: hidden;
   border: 1px solid var(--line-on-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(24px, 5vw, 60px);
-  clip-path: inset(0% 100% 0% 0%);
 }
 
-.index-item:nth-of-type(8n+1) .index-item-visual { background: linear-gradient(135deg, #362c1f, var(--ink) 75%); }
-.index-item:nth-of-type(8n+2) .index-item-visual { background: linear-gradient(135deg, #402318, var(--ink) 75%); }
-.index-item:nth-of-type(8n+4) .index-item-visual { background: linear-gradient(135deg, #232920, var(--ink) 75%); }
-.index-item:nth-of-type(8n+6) .index-item-visual { background: linear-gradient(135deg, #262a31, var(--ink) 75%); }
-.index-item:nth-of-type(8n+8) .index-item-visual { background: linear-gradient(135deg, #33291b, var(--ink) 75%); }
+.index-slide:nth-of-type(1) .index-slide-visual { background: linear-gradient(135deg, #362c1f, var(--ink) 75%); }
+.index-slide:nth-of-type(2) .index-slide-visual { background: linear-gradient(135deg, #402318, var(--ink) 75%); }
+.index-slide:nth-of-type(4) .index-slide-visual { background: linear-gradient(135deg, #232920, var(--ink) 75%); }
+.index-slide:nth-of-type(6) .index-slide-visual { background: linear-gradient(135deg, #262a31, var(--ink) 75%); }
+.index-slide:nth-of-type(8) .index-slide-visual { background: linear-gradient(135deg, #33291b, var(--ink) 75%); }
 
 .project-art {
   width: 100%;
@@ -62,20 +81,20 @@
   vector-effect: non-scaling-stroke;
 }
 
-.index-item-visual--hatch {
+.index-slide-visual--hatch {
   padding: 0;
 }
 
-.index-item-visual--hatch.hatch-concrete {
+.index-slide-visual--hatch.hatch-concrete {
   background: repeating-linear-gradient(45deg, rgba(var(--ink-rgb), 0.12) 0 2px, transparent 2px 14px), var(--paper-dim);
 }
 
-.index-item-visual--hatch.hatch-brick {
+.index-slide-visual--hatch.hatch-brick {
   background: repeating-linear-gradient(0deg, rgba(var(--rust-rgb), 0.22) 0 6px, transparent 6px 7px),
     repeating-linear-gradient(90deg, rgba(var(--ink-rgb), 0.1) 0 24px, transparent 24px 25px), var(--paper-dim);
 }
 
-.index-item-visual--hatch.hatch-timber {
+.index-slide-visual--hatch.hatch-timber {
   background: repeating-linear-gradient(90deg, rgba(var(--ink-rgb), 0.1) 0 3px, transparent 3px 16px), var(--paper-dim);
 }
 
@@ -90,21 +109,22 @@
   pointer-events: none;
 }
 
-.index-item-visual--hatch .project-number {
+.index-slide-visual--hatch .project-number {
   color: var(--ink);
   opacity: 0.55;
 }
 
-.index-item-row {
-  margin-top: clamp(24px, 4vw, 40px);
+.index-slide-row {
+  flex: 0 0 auto;
+  margin-top: clamp(22px, 3.5vw, 36px);
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: clamp(20px, 4vw, 50px);
+  gap: clamp(16px, 3vw, 40px);
 }
 
-.index-item-lead {
+.index-slide-lead {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -122,7 +142,7 @@
   color: var(--rust-soft);
 }
 
-.index-item-copy {
+.index-slide-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -131,6 +151,7 @@
 }
 
 .project-desc {
+  min-height: 2.6em;
   font-size: 1.02rem;
   color: rgba(var(--paper-rgb), 0.78);
 }
@@ -158,34 +179,53 @@
   transform: translate(3px, -3px);
 }
 
-/* ---------- live index counter (pinned while #work is in view) ---------- */
+/* ---------- carousel controls ---------- */
+
+.index-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-top: clamp(28px, 4vw, 46px);
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-on-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s var(--ease-soft), background 0.3s var(--ease-soft), color 0.3s var(--ease-soft);
+}
+
+.carousel-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.carousel-btn:hover {
+  border-color: var(--rust-soft);
+  background: var(--rust-soft);
+  color: var(--ink);
+}
 
 .index-counter {
-  position: fixed;
-  left: var(--gutter);
-  bottom: 26px;
-  z-index: 400;
   display: flex;
   align-items: baseline;
   gap: 6px;
-  padding: 10px 16px;
-  border: 1px solid var(--line-on-dark);
-  border-radius: 999px;
-  background: rgba(var(--ink-rgb), 0.55);
-  backdrop-filter: blur(6px);
+  min-width: 4.5em;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   letter-spacing: 0.06em;
-  color: var(--paper);
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition: opacity 0.4s var(--ease-soft), transform 0.4s var(--ease-soft);
-}
-
-.index-counter.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  color: rgba(var(--paper-rgb), 0.7);
 }
 
 .index-counter-current {
@@ -198,18 +238,23 @@
 }
 
 @media (max-width: 640px) {
-  .index-item-row {
+  .index-slides {
+    height: clamp(680px, 145vw, 820px);
+  }
+
+  .index-slide-row {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .index-item-copy {
+  .index-slide-copy {
     max-width: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .index-item-visual {
-    clip-path: inset(0% 0% 0% 0%) !important;
+  .index-slide {
+    transition: opacity 0.3s linear;
+    transform: none;
   }
 }
