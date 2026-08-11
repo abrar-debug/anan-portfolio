@@ -1,30 +1,37 @@
+import { projects } from "../data/projects.js";
+import { visuals } from "../data/visuals.js";
+
 export function initProjects() {
   const section = document.querySelector("[data-index-carousel]");
-  if (!section) return;
+  const track = section?.querySelector("[data-index-slides]");
+  if (!section || !track || !projects.length) return;
 
-  const slides = Array.from(section.querySelectorAll("[data-index-slide]"));
-  if (!slides.length) return;
+  track.innerHTML = projects
+    .map((p, i) => `<div class="hero-slide${i === 0 ? " active" : ""}">${visuals[p.visual] || ""}</div>`)
+    .join("");
+  const slides = Array.from(track.children);
 
   const textWrap = section.querySelector(".hero-overlay-text");
   const titleEl = section.querySelector("[data-index-title-el]");
   const metaEl = section.querySelector("[data-index-meta-el]");
   const currentEl = section.querySelector("[data-index-counter-current]");
   const totalEl = section.querySelector("[data-index-counter-total]");
-  const nextBtn = section.querySelector("[data-index-next]");
+  const readMoreLink = section.querySelector("[data-index-readmore]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (totalEl) totalEl.textContent = String(slides.length).padStart(2, "0");
+  if (totalEl) totalEl.textContent = String(projects.length).padStart(2, "0");
 
-  let index = Math.max(0, slides.findIndex((s) => s.classList.contains("active")));
+  let index = 0;
   let locked = false;
   let timer;
 
   function apply() {
-    const active = slides[index];
+    const p = projects[index];
     slides.forEach((s, i) => s.classList.toggle("active", i === index));
     if (currentEl) currentEl.textContent = String(index + 1).padStart(2, "0");
-    if (titleEl) titleEl.textContent = active.dataset.indexTitle || "";
-    if (metaEl) metaEl.textContent = active.dataset.indexMeta || "";
+    if (titleEl) titleEl.textContent = p.title;
+    if (metaEl) metaEl.textContent = `${p.category} — ${p.type} — ${p.year}`;
+    if (readMoreLink) readMoreLink.href = `/project.html?slug=${p.slug}`;
   }
 
   function swapText() {
@@ -46,7 +53,7 @@ export function initProjects() {
   }
 
   function goTo(i) {
-    index = (i + slides.length) % slides.length;
+    index = (i + projects.length) % projects.length;
     swapText();
     resetAutoplay();
   }
@@ -59,8 +66,6 @@ export function initProjects() {
       locked = false;
     }, 900);
   }
-
-  nextBtn?.addEventListener("click", () => step(1));
 
   section.addEventListener(
     "wheel",

@@ -56,16 +56,16 @@
   inset: 0;
 }
 
-.hero-slide-hatch.hatch-concrete {
+.hatch-concrete {
   background: repeating-linear-gradient(45deg, rgba(var(--ink-rgb), 0.12) 0 2px, transparent 2px 14px), var(--paper-dim);
 }
 
-.hero-slide-hatch.hatch-brick {
+.hatch-brick {
   background: repeating-linear-gradient(0deg, rgba(var(--rust-rgb), 0.22) 0 6px, transparent 6px 7px),
     repeating-linear-gradient(90deg, rgba(var(--ink-rgb), 0.1) 0 24px, transparent 24px 25px), var(--paper-dim);
 }
 
-.hero-slide-hatch.hatch-timber {
+.hatch-timber {
   background: repeating-linear-gradient(90deg, rgba(var(--ink-rgb), 0.1) 0 3px, transparent 3px 16px), var(--paper-dim);
 }
 
@@ -162,7 +162,7 @@
   border-color: var(--rust-soft);
   background: var(--rust-soft);
   color: var(--ink);
-  transform: rotate(90deg);
+  transform: translate(3px, -3px);
 }
 
 .hero-cta-label {

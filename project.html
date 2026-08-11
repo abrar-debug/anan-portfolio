@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anan Hoque — Architecture Studio</title>
-  <meta name="description" content="Anan Hoque is an architecture studio designing residential, cultural and civic buildings shaped by light, material and site." />
+  <title>Project — Anan Hoque</title>
+  <meta name="description" content="A project by Anan Hoque, an architecture studio designing residential, cultural and civic buildings shaped by light, material and site." />
   <meta name="theme-color" content="#14130f" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -15,7 +15,7 @@
     rel="stylesheet"
   />
 </head>
-<body class="is-hero">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- custom cursor -->
@@ -42,38 +42,39 @@
 
   <header class="site-nav">
     <div class="nav-inner">
-      <span class="nav-logo">Anan&nbsp;Hoque</span>
-      <a href="mailto:studio@ananhoque.com" class="nav-cta" data-cursor="link">Contact</a>
+      <a href="/" class="nav-logo" data-cursor="link">Anan&nbsp;Hoque</a>
+      <a href="/" class="nav-cta" data-cursor="link">← Index</a>
     </div>
   </header>
 
   <main id="main">
-    <section id="work" class="work-hero" data-theme="dark" data-index-carousel>
-      <div class="hero-slides" data-index-slides></div>
-
+    <section class="detail-hero" data-theme="dark" data-detail-visual>
       <div class="hero-scrim" aria-hidden="true"></div>
-
       <div class="hero-overlay">
-        <div class="hero-overlay-text" aria-live="polite">
-          <p class="hero-overlay-meta" data-index-meta-el></p>
-          <h2 class="hero-overlay-title" data-index-title-el></h2>
+        <div class="hero-overlay-text">
+          <p class="hero-overlay-meta" data-detail-meta></p>
+          <h1 class="hero-overlay-title" data-detail-title></h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-body">
+      <div class="detail-body-inner">
+        <p class="detail-description" data-detail-description></p>
+
+        <div class="detail-features">
+          <span class="detail-features-label">Specification</span>
+          <ul data-detail-features></ul>
         </div>
 
-        <a href="/project.html" class="hero-cta" data-index-readmore data-cursor="view">
-          <span class="hero-cta-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H9M17 7V15" /></svg>
-          </span>
-          <span class="hero-cta-label">Read more about this project</span>
-          <span class="hero-cta-counter">
-            <span class="hero-cta-counter-current" data-index-counter-current>01</span>
-            <span class="hero-cta-counter-sep">/</span>
-            <span data-index-counter-total>08</span>
-          </span>
+        <a href="/" class="detail-back-link" data-cursor="link">
+          <svg class="detail-back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7L7 17M7 17H15M7 17V9" /></svg>
+          Back to all projects
         </a>
       </div>
     </section>
   </main>
 
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/project-detail-main.js"></script>
 </body>
 </html>
