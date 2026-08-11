@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   scroll-behavior: auto;
   color-scheme: light;
@@ -18,7 +23,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 body::before {
@@ -103,60 +109,7 @@ h3 {
   top: 1rem;
 }
 
-/* ---------- shared editorial bits ---------- */
-
-.index-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--rust);
-}
-
-/* --rust only clears AA contrast against the light paper background;
-   dark sections need the lighter --rust-soft to stay above 4.5:1. */
-[data-theme="dark"] .index-label {
-  color: var(--rust-soft);
-}
-
 section {
   position: relative;
   padding: clamp(80px, 12vw, 160px) var(--gutter);
-}
-
-.icon-arrow {
-  width: 1em;
-  height: 1em;
-  stroke: currentColor;
-  stroke-width: 1.6;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 0.35s var(--ease);
-}
-
-/* generic scroll-reveal targets: JS toggles .is-visible */
-[data-reveal],
-[data-reveal-line] {
-  opacity: 0;
-  transform: translateY(28px);
-}
-
-[data-reveal].is-visible,
-[data-reveal-line].is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [data-reveal],
-  [data-reveal-line] {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
 }

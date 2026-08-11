@@ -1,20 +1,14 @@
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 @media (max-width: 640px) {
-  section {
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
+  .hero-overlay {
+    padding-bottom: clamp(120px, 32vw, 160px);
   }
 
-  .contact-meta {
-    gap: 32px;
+  .hero-cta {
+    right: var(--gutter);
+    bottom: clamp(30px, 6vw, 44px);
   }
 
-  .about-quote p {
-    max-width: 30ch;
+  .hero-cta-label {
+    display: none;
   }
 }
