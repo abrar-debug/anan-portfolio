@@ -115,3 +115,26 @@ section {
   position: relative;
   padding: clamp(80px, 12vw, 160px) var(--gutter);
 }
+
+/* generic scroll-reveal targets: JS toggles .is-visible */
+[data-reveal],
+[data-reveal-line] {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+[data-reveal].is-visible,
+[data-reveal-line].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-line] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

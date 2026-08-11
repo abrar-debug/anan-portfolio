@@ -60,20 +60,50 @@
 
     <section class="detail-body">
       <div class="detail-body-inner">
-        <p class="detail-description" data-detail-description></p>
+        <p class="detail-description" data-detail-description data-reveal></p>
 
-        <div class="detail-features">
+        <div class="detail-features" data-reveal>
           <span class="detail-features-label">Specification</span>
           <ul data-detail-features></ul>
         </div>
 
-        <a href="/" class="detail-back-link" data-cursor="link">
+        <a href="/" class="detail-back-link" data-cursor="link" data-reveal>
           <svg class="detail-back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7L7 17M7 17H15M7 17V9" /></svg>
           Back to all projects
         </a>
       </div>
     </section>
+
+    <section class="contact" data-theme="dark">
+      <div class="contact-inner">
+        <span class="contact-eyebrow" data-reveal>Get in Touch</span>
+        <h2 class="contact-title" data-reveal>Let's design <em>what's next.</em></h2>
+        <a href="mailto:studio@ananhoque.com" class="contact-email" data-copy data-magnetic data-cursor="view" data-reveal>
+          <span class="copy-toast">Copied</span>
+          studio@ananhoque.com
+        </a>
+        <div class="contact-meta" data-reveal>
+          <div>
+            <span>Studio</span>
+            <p>Based worldwide — studio visits by appointment.</p>
+          </div>
+          <div>
+            <span>Social</span>
+            <p><a href="#" data-cursor="link">Instagram</a> · <a href="#" data-cursor="link">LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer" data-theme="dark">
+    <div class="site-footer-inner">
+      <p>© 2026 Anan Hoque Architecture. All rights reserved.</p>
+      <button class="to-top" data-to-top data-magnetic data-cursor="link" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M12 5L5 12M12 5L19 12" /></svg>
+      </button>
+    </div>
+  </footer>
 
   <script type="module" src="/src/project-detail-main.js"></script>
 </body>

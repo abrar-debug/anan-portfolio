@@ -1,0 +1,104 @@
+.contact {
+  background: var(--ink);
+  color: var(--paper);
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rust-soft);
+}
+
+.contact-title {
+  font-size: clamp(3rem, 9vw, 7rem);
+  line-height: 1;
+  margin-top: 18px;
+}
+
+.contact-title em {
+  font-style: italic;
+  color: var(--rust-soft);
+}
+
+.contact-email {
+  position: relative;
+  display: inline-block;
+  margin-top: clamp(44px, 6vw, 68px);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  border-bottom: 1px solid rgba(var(--paper-rgb), 0.4);
+  padding-bottom: 8px;
+  transition: color 0.3s var(--ease-soft), border-color 0.3s var(--ease-soft);
+}
+
+.contact-email:hover {
+  color: var(--rust-soft);
+  border-color: var(--rust-soft);
+}
+
+.copy-toast {
+  position: absolute;
+  top: -1.9em;
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rust-soft);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s var(--ease-soft), transform 0.3s var(--ease-soft);
+}
+
+.contact-email.is-copied .copy-toast {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-meta {
+  margin-top: clamp(54px, 7vw, 84px);
+  display: flex;
+  gap: clamp(40px, 8vw, 120px);
+  flex-wrap: wrap;
+}
+
+.contact-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-meta > div > span {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rust-soft);
+}
+
+.contact-meta p {
+  font-size: 1rem;
+  color: rgba(var(--paper-rgb), 0.8);
+}
+
+.contact-meta a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease-soft);
+}
+
+.contact-meta a:hover {
+  border-color: currentColor;
+}

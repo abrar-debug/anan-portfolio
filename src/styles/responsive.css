@@ -11,4 +11,8 @@
   .hero-cta-label {
     display: none;
   }
+
+  .contact-meta {
+    gap: 32px;
+  }
 }

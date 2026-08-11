@@ -1,0 +1,44 @@
+.site-footer {
+  background: var(--ink);
+  color: rgba(var(--paper-rgb), 0.6);
+  border-top: 1px solid var(--line-on-dark);
+}
+
+.site-footer-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 28px var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.to-top {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-on-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s var(--ease-soft), background 0.3s var(--ease-soft), color 0.3s var(--ease-soft);
+}
+
+.to-top svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.to-top:hover {
+  border-color: var(--rust-soft);
+  background: var(--rust-soft);
+  color: var(--ink);
+}
