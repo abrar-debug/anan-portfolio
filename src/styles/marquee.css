@@ -33,18 +33,6 @@
   }
 }
 
-.press-marquee {
-  margin-top: clamp(50px, 8vw, 90px);
-  background: transparent;
-  color: var(--paper);
-  border-color: var(--line-on-dark);
-}
-
-.press-marquee .marquee-track {
-  animation-duration: 34s;
-  animation-direction: reverse;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation-play-state: paused;

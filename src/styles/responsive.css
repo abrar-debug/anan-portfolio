@@ -14,7 +14,7 @@ body {
     gap: 32px;
   }
 
-  .quote-slide p {
-    max-width: 24ch;
+  .about-quote p {
+    max-width: 30ch;
   }
 }

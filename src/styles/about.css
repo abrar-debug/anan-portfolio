@@ -55,36 +55,6 @@
   font-size: 1.05rem;
 }
 
-.about-stats {
-  margin-top: clamp(44px, 6vw, 68px);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  border-top: 1px solid var(--line);
-  padding-top: 26px;
-}
-
-.about-stats li {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.stat-num {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--rust);
-  line-height: 1;
-}
-
-.stat-label {
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-
 .about-capabilities {
   margin-top: clamp(44px, 6vw, 68px);
   border-top: 1px solid var(--line);
@@ -112,6 +82,42 @@
   color: var(--ink-soft);
 }
 
+.about-quote {
+  margin-top: clamp(44px, 6vw, 68px);
+  padding-left: clamp(20px, 3vw, 28px);
+  border-left: 2px solid var(--rust);
+}
+
+.about-quote .quote-mark {
+  width: 34px;
+  height: 25px;
+  margin-bottom: 16px;
+  fill: var(--rust);
+}
+
+.about-quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  line-height: 1.42;
+  max-width: 42ch;
+}
+
+.about-quote footer {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.about-quote cite {
+  font-style: normal;
+  color: var(--ink);
+}
+
 @media (max-width: 900px) {
   .about {
     grid-template-columns: 1fr;
@@ -120,9 +126,5 @@
   .about-visual {
     position: static;
     max-width: 380px;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(2, 1fr);
   }
 }

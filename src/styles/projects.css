@@ -1,73 +1,54 @@
-.projects {
+.work-index {
   background: var(--ink);
   color: var(--paper);
 }
 
-.projects-head {
+.work-index-head {
   max-width: var(--container);
-  margin: 0 auto clamp(64px, 10vw, 130px);
+  margin: 0 auto clamp(64px, 10vw, 120px);
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.projects-head h2 {
+.work-index-head h2 {
   font-size: clamp(2.4rem, 6vw, 4.6rem);
 }
 
-.project {
+.work-index-kicker {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  max-width: 46ch;
+  color: rgba(var(--paper-rgb), 0.75);
+}
+
+.index-list {
   max-width: var(--container);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(28px, 5vw, 72px);
-  align-items: center;
-  padding-bottom: clamp(90px, 14vw, 170px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(70px, 10vw, 130px);
 }
 
-.project:last-child {
-  padding-bottom: 0;
-}
-
-.project--reverse .project-visual {
-  order: 2;
-}
-
-.project--reverse .project-info {
-  order: 1;
-}
-
-.project-visual {
+.index-item-visual {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--line-on-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(30px, 6vw, 70px);
+  padding: clamp(24px, 5vw, 60px);
   clip-path: inset(0% 100% 0% 0%);
 }
 
-.project:nth-of-type(1) .project-visual {
-  background: linear-gradient(135deg, #362c1f, var(--ink) 75%);
-}
-
-.project:nth-of-type(2) .project-visual {
-  background: linear-gradient(135deg, #402318, var(--ink) 75%);
-}
-
-.project:nth-of-type(3) .project-visual {
-  background: linear-gradient(135deg, #232920, var(--ink) 75%);
-}
-
-.project:nth-of-type(4) .project-visual {
-  background: linear-gradient(135deg, #262a31, var(--ink) 75%);
-}
-
-.project:nth-of-type(5) .project-visual {
-  background: linear-gradient(135deg, #33291b, var(--ink) 75%);
-}
+.index-item:nth-of-type(8n+1) .index-item-visual { background: linear-gradient(135deg, #362c1f, var(--ink) 75%); }
+.index-item:nth-of-type(8n+2) .index-item-visual { background: linear-gradient(135deg, #402318, var(--ink) 75%); }
+.index-item:nth-of-type(8n+4) .index-item-visual { background: linear-gradient(135deg, #232920, var(--ink) 75%); }
+.index-item:nth-of-type(8n+6) .index-item-visual { background: linear-gradient(135deg, #262a31, var(--ink) 75%); }
+.index-item:nth-of-type(8n+8) .index-item-visual { background: linear-gradient(135deg, #33291b, var(--ink) 75%); }
 
 .project-art {
   width: 100%;
@@ -81,26 +62,59 @@
   vector-effect: non-scaling-stroke;
 }
 
-.project-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.index-item-visual--hatch {
+  padding: 0;
+}
+
+.index-item-visual--hatch.hatch-concrete {
+  background: repeating-linear-gradient(45deg, rgba(var(--ink-rgb), 0.12) 0 2px, transparent 2px 14px), var(--paper-dim);
+}
+
+.index-item-visual--hatch.hatch-brick {
+  background: repeating-linear-gradient(0deg, rgba(var(--rust-rgb), 0.22) 0 6px, transparent 6px 7px),
+    repeating-linear-gradient(90deg, rgba(var(--ink-rgb), 0.1) 0 24px, transparent 24px 25px), var(--paper-dim);
+}
+
+.index-item-visual--hatch.hatch-timber {
+  background: repeating-linear-gradient(90deg, rgba(var(--ink-rgb), 0.1) 0 3px, transparent 3px 16px), var(--paper-dim);
 }
 
 .project-number {
+  position: absolute;
+  left: clamp(16px, 3vw, 28px);
+  bottom: clamp(10px, 2vw, 20px);
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  color: rgba(var(--paper-rgb), 0.25);
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
   line-height: 1;
+  color: rgba(var(--paper-rgb), 0.9);
+  pointer-events: none;
+}
+
+.index-item-visual--hatch .project-number {
+  color: var(--ink);
+  opacity: 0.55;
+}
+
+.index-item-row {
+  margin-top: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 50px);
+}
+
+.index-item-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .project-title {
-  margin-top: 10px;
-  font-size: clamp(1.9rem, 3.6vw, 3.1rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
 }
 
 .project-meta {
-  margin-top: 16px;
   font-family: var(--font-mono);
   font-size: 0.76rem;
   letter-spacing: 0.08em;
@@ -108,15 +122,20 @@
   color: var(--rust-soft);
 }
 
+.index-item-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  max-width: 420px;
+}
+
 .project-desc {
-  margin-top: 22px;
-  max-width: 46ch;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   color: rgba(var(--paper-rgb), 0.78);
 }
 
 .project-link {
-  margin-top: 30px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -139,20 +158,58 @@
   transform: translate(3px, -3px);
 }
 
-@media (max-width: 860px) {
-  .project,
-  .project--reverse {
-    grid-template-columns: 1fr;
+/* ---------- live index counter (pinned while #work is in view) ---------- */
+
+.index-counter {
+  position: fixed;
+  left: var(--gutter);
+  bottom: 26px;
+  z-index: 400;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 10px 16px;
+  border: 1px solid var(--line-on-dark);
+  border-radius: 999px;
+  background: rgba(var(--ink-rgb), 0.55);
+  backdrop-filter: blur(6px);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--paper);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-soft), transform 0.4s var(--ease-soft);
+}
+
+.index-counter.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.index-counter-current {
+  color: var(--rust-soft);
+  font-weight: 700;
+}
+
+.index-counter-sep {
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .index-item-row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .project--reverse .project-visual,
-  .project--reverse .project-info {
-    order: 0;
+  .index-item-copy {
+    max-width: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .project-visual {
+  .index-item-visual {
     clip-path: inset(0% 0% 0% 0%) !important;
   }
 }
